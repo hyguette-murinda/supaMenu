@@ -7,10 +7,10 @@ const SignUp = () =>{
         <View
           style={tailwind`flex-1 w-full items-center justify-center bg-[#e68a00]`}
         >
-          <View style={tailwind`px-4 w-full h-[70%] max-w-sm bg-white mt-[50%]`}>
-            <Text style={tailwind`text-5xl font-bold p-6 `}>
+          <View style={tailwind`px-4 w-full h-[70%] max-w-sm bg-white mt-[58%] rounded-t-3xl`}>
+            <Text style={tailwind`text-5xl font-bold p-6 text-center `}>
             <Text style={[tailwind`text-black bold text-xl`]}>Supa</Text>
-            <Text style={[tailwind`text-amber-700 bold text-xl`]}>Menu</Text>
+            <Text style={[tailwind`text-[#e68a00] bold text-xl`]}>Menu</Text>
             </Text>
             <Text>Welcome...</Text>
             <Text>Please fill in the information</Text>
