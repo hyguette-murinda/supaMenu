@@ -7,33 +7,25 @@ const SignUp = () =>{
         <View
           style={tailwind`flex-1 w-full items-center justify-center bg-[#e68a00]`}
         >
-          <View style={tailwind`px-4 w-full h-[70%] max-w-sm bg-white mt-[58%] rounded-t-3xl`}>
-            <Text style={tailwind`text-5xl font-bold p-6 text-center `}>
-            <Text style={[tailwind`text-black bold text-xl`]}>Supa</Text>
-            <Text style={[tailwind`text-[#e68a00] bold text-xl`]}>Menu</Text>
+          <View style={tailwind`px-4 w-full h-[80%] max-w-sm bg-white mt-[58%] rounded-t-3xl`}>
+            <Text style={tailwind`text-3xl font-bold pt-6 pb-4 text-center `}>
+            <Text style={[tailwind`text-black bold`]}>Supa</Text>
+            <Text style={[tailwind`text-[#e68a00] bold`]}>Menu</Text>
             </Text>
-            <Text>Welcome...</Text>
-            <Text>Please fill in the information</Text>
+            <Text style={[tailwind`text-center text-[#004080] font-bold pb-2`]}>Welcome...</Text>
+            <Text style={[tailwind`text-center  pb-2`]}>Sign in to continue</Text>
     
-            <View style={tailwind`flex flex-col gap-4`}>
+            <View style={tailwind`flex flex-col gap-4 mb-3`}>
               <TextInput placeholder="Enter email address" />
               <TextInput placeholder="Enter password" />
             </View>
     
-            <View style={tailwind`flex flex-row justify-between items-center my-8`}>
-              <View style={tailwind`flex-row items-center`}>
-                <Pressable
-                  style={tailwind`bg-gray-50 h-6 w-6 rounded-sm mr-2`}
-                ></Pressable>
-                <Text style={tailwind`text-gray-50`}>Remember me</Text>
-              </View>
-              <Pressable>
-                <Text style={tailwind`text-gray-50 font-bold`}>Reset password</Text>
-              </Pressable>
-            </View>
-    
             <Button text="Login" variant="success" />
+            <Text style={[tailwind`text-[#8c8c8c] text-center p-3`]}>OR</Text>
+            <Button text="Login with Google" variant="default" />
+            <Button text="Login with Facebook" variant="default" />
           </View>
+          
         </View>
       );
 }

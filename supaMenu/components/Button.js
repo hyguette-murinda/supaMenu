@@ -6,6 +6,7 @@ const Button = ({ text, onPress, variant }) => {
   const buttonStyles = [
     styles.button,
     variant === 'success' ? styles.successButton : styles.defaultButton,
+    variant === 'default' ? styles.defaultButton : styles.successButton,
   ];
 
   return (
@@ -23,7 +24,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   defaultButton: {
-    backgroundColor: '#e68a00',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 5,
+    borderBlockColor:'gray',
+    alignItems: 'center',
+    borderColor: 'gray',
+    backgroundColor: 'white',
   },
   successButton: {
     backgroundColor: '#e68a00',
