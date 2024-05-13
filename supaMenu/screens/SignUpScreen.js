@@ -5,12 +5,12 @@ import Button from "../components/Button";
 const SignUp = () =>{
     return (
         <View
-          style={tailwind`flex-1 w-full items-center justify-center bg-amber-700`}
+          style={tailwind`flex-1 w-full items-center justify-center bg-[#e68a00]`}
         >
-          <View style={tailwind`px-4 w-full h-[70%] max-w-sm bg-white`}>
-            <Text style={tailwind`text-5xl font-bold mb-6 `}>
+          <View style={tailwind`px-4 w-full h-[70%] max-w-sm bg-white mt-[50%]`}>
+            <Text style={tailwind`text-5xl font-bold p-6 `}>
             <Text style={[tailwind`text-black bold text-xl`]}>Supa</Text>
-            <Text style={[tailwind`text-white bold text-xl`]}>Menu</Text>
+            <Text style={[tailwind`text-amber-700 bold text-xl`]}>Menu</Text>
             </Text>
             <Text>Welcome...</Text>
             <Text>Please fill in the information</Text>

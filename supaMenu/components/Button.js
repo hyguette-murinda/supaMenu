@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#e68a00',
   },
   successButton: {
-    backgroundColor: 'green',
+    backgroundColor: '#e68a00',
   },
   buttonText: {
     color: 'white',
