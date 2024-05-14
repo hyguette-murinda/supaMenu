@@ -2,7 +2,7 @@ import { View, Text, Pressable } from "react-native";
 import tailwind from "twrnc";
 import TextInput from "../components/TextInput";
 import Button from "../components/Button";
-const SignUp = () =>{
+const SignIn = () =>{
     return (
         <View
           style={tailwind`flex-1 w-full items-center justify-center bg-[#e68a00]`}
@@ -18,7 +18,6 @@ const SignUp = () =>{
             <View style={tailwind`flex flex-col gap-4 mb-3`}>
               <TextInput placeholder="Enter email address" />
               <TextInput placeholder="Enter password" />
-              <TextInput placeholder="Enter password" />
             </View>
     
             <Button text="Login" variant="success" />
@@ -30,4 +29,4 @@ const SignUp = () =>{
         </View>
       );
 }
-export default SignUp
+export default SignIn
