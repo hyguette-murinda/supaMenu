@@ -7,7 +7,7 @@ import SignIn from './screens/SignInScreen';
 const App = () => {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <SignUp/>
+      <LandingPage/>
     </View>
   );
 };
