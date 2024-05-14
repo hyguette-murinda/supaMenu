@@ -3,11 +3,12 @@ import { View } from 'react-native';
 import LandingPage from './screens/LandingPage';
 import SignUp from './screens/SignUpScreen';
 import SignIn from './screens/SignInScreen';
+import QrcodeScreen from './screens/QrcodeScreen';
 
 const App = () => {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <LandingPage/>
+      <QrcodeScreen/>
     </View>
   );
 };
