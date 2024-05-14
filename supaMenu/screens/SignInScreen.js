@@ -9,7 +9,7 @@ const SignIn = () =>{
         >
           <View style={tailwind`px-4 w-full h-[80%] max-w-sm bg-white mt-[58%] rounded-t-3xl`}>
             <Text style={tailwind`text-3xl font-bold pt-6 pb-4 text-center `}>
-            <Text style={[tailwind`text-black bold`]}>Supa</Text>
+            <Text style={[tailwind`text-black`]}>Supa</Text>
             <Text style={[tailwind`text-[#e68a00] bold`]}>Menu</Text>
             </Text>
             <Text style={[tailwind`text-center text-[#004080] font-bold pb-2`]}>Welcome...</Text>

@@ -17,9 +17,9 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     borderRadius: 5,
     padding: 10,
-    textShadowColor:'white',
+    // textShadowColor:'white',
     marginBottom: 10,
-    color: 'white',
+    // color: 'white',
   },
 });
 
