@@ -10,7 +10,7 @@ const SignUp = ({navigation}) =>{
         <View
           style={tailwind`flex-1 w-full items-center justify-center bg-[#e68a00]`}
         >
-          <View style={tailwind`px-4 w-full h-[100%] max-w-sm bg-white mt-[58%] rounded-t-3xl`}>
+          <View style={tailwind`px-4 w-full h-[90%] max-w-sm bg-white mt-[58%] rounded-t-3xl`}>
             <Text style={tailwind`text-3xl font-bold pt-6 pb-4 text-center `}>
             <Text style={[tailwind`text-black`]}>Supa</Text>
             <Text style={[tailwind`text-[#e68a00] bold`]}>Menu</Text>
@@ -30,9 +30,7 @@ const SignUp = ({navigation}) =>{
             <Button text="Login" variant="success" onPress={handleLoginPress} />
             <Text style={tailwind`text-gray-500 text-center mt-2`}>
               <Text style={tailwind``}>Don't have an account?</Text>
-              <Pressable>
                 <Text style={[tailwind`text-[#e68a00] font-bold`]}> Register</Text>
-                </Pressable>
             </Text>
           </View>
           
