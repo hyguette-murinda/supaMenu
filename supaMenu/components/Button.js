@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
@@ -8,11 +7,10 @@ const Button = ({ text, onPress, variant, style }) => {
     variant === 'success' ? styles.successButton : styles.defaultButton,
     variant === 'default' ? styles.defaultButton : styles.successButton,
   ];
-  
 
   return (
-    <TouchableOpacity style={buttonStyles} onPress={onPress}>
-      <Text style={styles.buttonText}>{text}</Text>
+    <TouchableOpacity style={[buttonStyles, style]} onPress={onPress}>
+      <Text style={variant === 'default' ? styles.defaultButtonText : styles.buttonText}>{text}</Text>
     </TouchableOpacity>
   );
 };
@@ -22,7 +20,6 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 20,
     borderRadius: 5,
-    textDecorationColor:'black',
     alignItems: 'center',
     shadowColor: '#000',
     shadowOffset: {
@@ -43,8 +40,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#e68a00',
   },
   defaultButtonText: {
-  color: 'black', // Set text color to black
-  fontWeight: 'bold',
+    color: 'black', // Set text color to black
+    fontWeight: 'bold',
   },
   buttonText: {
     color: 'white',
