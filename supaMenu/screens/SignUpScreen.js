@@ -27,7 +27,9 @@ const SignUp = () =>{
             <Button text="Login" variant="success" />
             <Text style={tailwind`text-gray-500 text-center mt-2`}>
               <Text style={tailwind``}>Don't have an account?</Text>
+              <Pressable>
                 <Text style={[tailwind`text-[#e68a00] font-bold`]}> Register</Text>
+                </Pressable>
             </Text>
           </View>
           

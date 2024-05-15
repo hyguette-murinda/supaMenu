@@ -16,18 +16,11 @@ const NearbyRestoCard = ({ name, location, imageSource }) => {
 const styles = StyleSheet.create({
   container: {
     width: '80%',
-    height: '30%',
+    height: 150,
     flexDirection: 'row',
     borderRadius: 10,
     backgroundColor: 'white',
     marginBottom: 20,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
     elevation: 5,
   },
   image: {
@@ -44,6 +37,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     marginBottom: 5,
+    color: 'black',
   },
   location: {
     fontSize: 14,
