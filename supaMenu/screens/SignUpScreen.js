@@ -10,15 +10,12 @@ const SignUp = ({navigation}) =>{
 
   const handleLoginPress = () => {
     navigation.navigate('SignIn');
-  };
+  }
+
   const handleProceedPress = () =>{
     navigation.navigate('qrcode');
   }
-  const fetchUser = async () => {
-    
-    const response = await axios(configurationObject);
-    console.log(response.data);
-  };
+
   const  handleSignUp = async () =>{
     
     if (!fullName || !password){
@@ -27,7 +24,7 @@ const SignUp = ({navigation}) =>{
     }
     try {
       
-      const api = await fetch('http://10.5.222.83:8080/api/user/register', {
+      const api = await fetch('http://10.5.220.184:8080/api/user/register', {
         method: 'POST',
         body: JSON.stringify({
           userName: fullName,
