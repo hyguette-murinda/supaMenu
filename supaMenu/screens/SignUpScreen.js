@@ -11,21 +11,43 @@ const SignUp = ({navigation}) =>{
   const handleLoginPress = () => {
     navigation.navigate('SignIn');
   };
-  const handleSignUp = () =>{
+  const handleProceedPress = () =>{
+    navigation.navigate('qrcode');
+  }
+  const fetchUser = async () => {
+    
+    const response = await axios(configurationObject);
+    console.log(response.data);
+  };
+  const  handleSignUp = async () =>{
+    
     if (!fullName || !password){
       alert('please fill the form')
       return;
     }
-    axios.post('http://localhost:8080/api/user/register', {
-      fullName: fullName,
-      password: password
-    })
-    .then(response =>{
-      console.log('signUp done succesfully:', response.data)
-    })
-    .catch(error =>{
-      console.log('error: ', error)
-    })
+    try {
+      
+      const api = await fetch('http://10.5.222.83:8080/api/user/register', {
+        method: 'POST',
+        body: JSON.stringify({
+          userName: fullName,
+          password: password,
+        }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      const data = await api.json();
+      if (data) {
+        console.log(data);
+      }
+    } catch (err) {
+      console.log('The pro error', err);
+    }
+  }
+  const handleSignUpAndProceedPress = () =>{
+    handleSignUp();
+    handleProceedPress();
   }
 
     return (
@@ -46,7 +68,7 @@ const SignUp = ({navigation}) =>{
               {/* <TextInput placeholder="Your email" /> */}
             </View>
     
-            <Button text="Proceed" variant="success" />
+            <Button text="Proceed" variant="success" onPress={handleSignUpAndProceedPress}/>
             <Text style={[tailwind`text-[#8c8c8c] text-center p-1`]}>OR</Text>
             <Text style={[tailwind`text-center  pb-2`]}>if you have a PMG account</Text>
             <Button text="Login" variant="success" onPress={handleLoginPress} />
