@@ -1,11 +1,33 @@
+import React, {useState} from 'react'
 import { View, Text, Pressable } from "react-native";
 import tailwind from "twrnc";
 import TextInput from "../components/TextInput";
 import Button from "../components/Button";
+import axios from 'axios';
 const SignUp = ({navigation}) =>{
+  const [fullName, setFullName] = useState('');
+  const [password, setPassword] = useState('');
+
   const handleLoginPress = () => {
     navigation.navigate('SignIn');
   };
+  const handleSignUp = () =>{
+    if (!fullName || !password){
+      alert('please fill the form')
+      return;
+    }
+    axios.post('http://localhost:8080/api/user/register', {
+      fullName: fullName,
+      password: password
+    })
+    .then(response =>{
+      console.log('signUp done succesfully:', response.data)
+    })
+    .catch(error =>{
+      console.log('error: ', error)
+    })
+  }
+
     return (
         <View
           style={tailwind`flex-1 w-full items-center justify-center bg-[#e68a00]`}
@@ -19,9 +41,9 @@ const SignUp = ({navigation}) =>{
             <Text style={[tailwind`text-center text-gray-500  pb-2`]}>Please fill in the information</Text>
     
             <View style={tailwind`flex flex-col gap-4 mb-3`}>
-              <TextInput placeholder="Full Name" />
-              <TextInput placeholder="Phone number" />
-              <TextInput placeholder="Your email" />
+              <TextInput placeholder="Full Name" value={fullName} onChangeText={text =>setFullName(text)}/>
+              <TextInput placeholder="Enter Password" secureTextEntry={true} value={password} onChangeText={text =>setPassword(text)} />
+              {/* <TextInput placeholder="Your email" /> */}
             </View>
     
             <Button text="Proceed" variant="success" />

@@ -7,7 +7,7 @@ import SignUp from './screens/SignUpScreen';
 import SignIn from './screens/SignInScreen';
 import QrcodeScreen from './screens/QrcodeScreen';
 import NearbyRestoCard from './components/NearRestoComponent';
-
+// import FeedbackScreen from './screens/feedbackScreen';
 
 const Stack = createStackNavigator();
 const App = () => {
@@ -18,6 +18,7 @@ const App = () => {
         <Stack.Screen name="landing" component={LandingPage} options={{ headerShown: false }}/>
         <Stack.Screen name="Home" component={SignUp} options={{ headerShown: false }} />
         <Stack.Screen name="SignIn" component={SignIn} options={{ headerShown: false }}/>
+        {/* <Stack.Screen name="feedback" component={FeedbackScreen} options={{headerShown: false}} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
