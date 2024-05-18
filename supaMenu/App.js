@@ -15,8 +15,8 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="landing" component={LandingPage} options={{ headerShown: false }}/>
-        <Stack.Screen name="Home" component={SignUp} options={{ headerShown: false }} />
+        <Stack.Screen name="Home" component={LandingPage} options={{ headerShown: false }}/>
+        <Stack.Screen name="SignUp" component={SignUp} options={{ headerShown: false }} />
         <Stack.Screen name="SignIn" component={SignIn} options={{ headerShown: false }}/>
         <Stack.Screen name="qrcode" component={QrcodeScreen} options={{ headerShown: false }}/>
         {/* <Stack.Screen name="feedback" component={FeedbackScreen} options={{headerShown: false}} /> */}
