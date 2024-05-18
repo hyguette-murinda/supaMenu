@@ -22,7 +22,7 @@ function SearchRestaurant() {
               <TouchableOpacity onPress={() => toggleSearchField(!showSearchField)} style={tailwind`rounded-2xl bg-gray-200 p-1 mt-2 mx-4 `}>
                 <ChevronLeftIcon color="orange" size={25} />
               </TouchableOpacity>
-            <View style={tailwind`flex-row items-center radius-sm py-3`}>
+            <View style={tailwind`flex-row items-center py-3`}>
             {showSearchField && (
               <TextInput
                 placeholder='Search...'
