@@ -7,6 +7,10 @@ import axios from 'axios';
 const SignIn = () =>{
   const [userName, setuserName] = useState('');
   const [password, setPassword] = useState('');
+
+  const handleLoginPress = () => {
+    navigation.navigate('SignIn');
+  }
   
   const handleSignIn = async () => {
     if (!userName) {
@@ -30,7 +34,11 @@ const SignIn = () =>{
     } catch (err) {
       console.log('The pro error', err);
     }
-  };
+  }
+  const handleLogInPressAndSignIn = () =>{
+    handleSignIn();
+    handleLoginPress();
+  }
     return (
       
         <View
@@ -49,7 +57,7 @@ const SignIn = () =>{
               <TextInput placeholder="Enter password" secureTextEntry={true} value={password} onChangeText={text =>setPassword(text)}/>
             </View>
     
-            <Button text="Login" variant="success" onPress={handleSignIn} />
+            <Button text="Login" variant="success" onPress={handleLogInPressAndSignIn} />
             <Text style={[tailwind`text-[#8c8c8c] text-center p-3`]}>OR</Text>
             <Button text="Login with Google" variant="default" />
             <Button text="Login with Facebook" variant="default" />
