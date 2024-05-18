@@ -3,35 +3,34 @@ import { View, Text, Pressable } from "react-native";
 import tailwind from "twrnc";
 import TextInput from "../components/TextInput";
 import Button from "../components/Button";
+import axios from 'axios';
 const SignIn = () =>{
   const [userName, setuserName] = useState('');
   const [password, setPassword] = useState('');
-  const  handleSignIn = async () =>{
-    
-    if (!userName || !password){
-      alert('please fill the form')
+  
+  const handleSignIn = async () => {
+    if (!userName) {
+      alert('Please fill in the form');
       return;
     }
+
+    const url = `http://10.5.223.67:8080/api/user/${userName}`;
+
     try {
-      
-      const api = await fetch('http://10.5.220.184:8080/api/user/register', {
-        method: 'GET',
-        body: JSON.stringify({
-          userName: fullName,
-          password: password,
-        }),
+      const response = await axios.get(url, {
         headers: {
-          'Content-Type': 'application/json'
-        }
+          'Content-Type': 'application/json',
+        },
       });
-      const data = await api.json();
-      if (data) {
-        console.log(data);
+
+      if (response.data) {
+        console.log(response.data);
+        console.log("Login successful");
       }
     } catch (err) {
       console.log('The pro error', err);
     }
-  }
+  };
     return (
       
         <View
